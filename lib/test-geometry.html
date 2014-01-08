@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test geometry functions</title>
+        </script>
+    </head>
+    <body>
+        <div id="status">Running...</div>
+        <script src="geometry.js"></script>
+        <script>
+var asserts = 0;
+
+function assertEqual(a, b) {
+    var ok = true;
+    if (typeof a == 'number' && typeof b == 'number') {
+        if (isNaN(a) != isNaN(b)) {
+            ok = false;
+        } else if (Math.abs(a - b) > 1e-10) {
+            ok = false;
+        }
+    } else {
+        ok = (a === b);
+    }
+    if (!ok) {
+        var msg = "Assertion failure: '"
+            + a + "' !== '"
+            + b + "'";
+        setStatus(msg);
+        throw new Error(msg);
+    }
+    asserts++;
+}
+
+function setStatus(status) {
+    document.getElementById('status').innerHTML = status;
+}
+
+function checkEndpoints(line) {
+    if (line.y1 !== line.y2) {
+        assertEqual(line.y(line.x1), line.y1);
+        assertEqual(line.y(line.x2), line.y2);
+    }
+    if (line.x1 !== line.x2) {
+        assertEqual(line.x(line.y1), line.x1);
+        assertEqual(line.x(line.y2), line.x2);
+    }
+}
+
+var line1 = new geo.LineSegment(1, 1, 2, 3),
+    line2 = new geo.LineSegment(1, 2, 5, 0),
+    line3 = new geo.LineSegment(2, 3, 5, 9),
+    line4 = new geo.LineSegment(1.5, 2, 1.5, 3);
+    line5 = new geo.LineSegment(2, 1, 5, 1);
+
+checkEndpoints(line1);
+checkEndpoints(line2);
+
+var i12 = line1.intersect(line2),
+    i21 = line2.intersect(line1),
+    i13 = line1.intersect(line3),
+    i23 = line2.intersect(line3),
+    i32 = line3.intersect(line2),
+    i14 = line1.intersect(line4),
+    i15 = line1.intersect(line5),
+    i45 = line4.intersect(line5);
+
+assertEqual(i12.x, 1.4);
+assertEqual(i12.y, 1.8);
+assertEqual(i12.in1, true);
+assertEqual(i12.in2, true);
+
+assertEqual(i21.x, 1.4);
+assertEqual(i21.y, 1.8);
+assertEqual(i21.in1, true);
+assertEqual(i21.in2, true);
+
+assertEqual(i13.x, NaN);
+assertEqual(i13.y, NaN);
+
+assertEqual(i23.x, 1.4);
+assertEqual(i23.y, 1.8);
+assertEqual(i23.in1, true);
+assertEqual(i23.in2, false);
+
+assertEqual(i32.x, 1.4);
+assertEqual(i32.y, 1.8);
+assertEqual(i32.in1, false);
+assertEqual(i32.in2, true);
+
+assertEqual(i14.x, 1.5);
+assertEqual(i14.y, 2);
+assertEqual(i14.in1, true);
+assertEqual(i14.in2, true);
+
+assertEqual(i15.x, 1);
+assertEqual(i15.y, 1);
+assertEqual(i15.in1, true);
+assertEqual(i15.in2, false);
+
+assertEqual(i45.x, 1.5);
+assertEqual(i45.y, 1);
+assertEqual(i45.in1, false);
+assertEqual(i45.in2, false);
+
+setStatus(asserts + ' tests OK');
+        </script>
+    </body>
+</html>

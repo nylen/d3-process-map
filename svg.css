@@ -1,0 +1,52 @@
+.link {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1.5px;
+    opacity: .7;
+    marker-end: url(#end);
+}
+
+marker#end {
+    fill: #666;
+    stroke: #666;
+    stroke-width: 1.5px;
+}
+
+.node rect {
+    stroke-width: 1.5px;
+}
+
+.node text {
+    fill: #000;
+    font: 10px sans-serif;
+    pointer-events: none;
+}
+
+.node.selected rect {
+    filter: url(#blue-glow);
+}
+
+.link.inactive,
+.node.inactive rect,
+.node.inactive text {
+    opacity: .2;
+}
+
+.node.inactive.selected rect,
+.node.inactive.selected text {
+    opacity: .6;
+}
+
+.legend {
+    position: fixed;
+}
+
+.legend .category rect {
+    stroke-width: 1px;
+}
+
+.legend .category text {
+    fill: #000;
+    font: 10px sans-serif;
+    pointer-events: none;
+}

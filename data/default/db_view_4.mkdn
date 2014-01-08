@@ -1,0 +1,1 @@
+This view contains miscellaneous other data for the current period.

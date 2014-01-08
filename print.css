@@ -1,0 +1,30 @@
+@media print {
+    body {
+        /* Only works in Chrome and IE.  See:
+         * http://css-tricks.com/almanac/properties/z/zoom/
+         * The "real" way to do this would be:
+         * http://stackoverflow.com/questions/9981411
+         */
+        zoom: 80%;
+    }
+    .nav-button {
+        display: none;
+    }
+    #docs-list {
+        margin-top: 0 !important;
+    }
+    h1, h2, h3 {
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+    .docs {
+        page-break-inside: avoid;
+    }
+    .select-object {
+        font-weight: bold;
+    }
+    h3 + ul .select-object {
+        font-weight: normal;
+    }
+}
+

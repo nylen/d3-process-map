@@ -1,0 +1,9 @@
+The database that provides some data for
+{{Report 5}}, {{Report 6}}, and
+{{Intermediate step 3}}.  It is located at:
+
+    /path/Data store 1
+
+This database contains some simple mapping logic that takes the results of the
+{{query2.sql}} query and splits
+it into one query for each of the {{Intermediate step 3}} files.

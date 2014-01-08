@@ -1,0 +1,4 @@
+The database that provides the data for the reports and the upstream reports.
+It is located at:
+
+    /path/Data store 2

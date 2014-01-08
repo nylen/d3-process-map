@@ -1,0 +1,107 @@
+{
+    "title" : "Les Miserables characters",
+    "graph" : {
+        "linkDistance" : 150,
+        "charge"       : -400,
+        "height"       : 800,
+        "numColors"    : 12,
+        "labelPadding" : {
+            "left"   : 3,
+            "right"  : 3,
+            "top"    : 2,
+            "bottom" : 2
+        },
+        "labelMargin" : {
+            "left"   : 3,
+            "right"  : 3,
+            "top"    : 2,
+            "bottom" : 2
+        },
+        "ticksWithoutCollisions" : 50
+    },
+    "types" : {
+        "group0" : {
+            "short" : "Group 0",
+            "long"  : "Group 0 long name for docs"
+        },
+        "group1" : {
+            "short" : "Group 1",
+            "long"  : "Group 1 long name for docs"
+        },
+        "group2" : {
+            "short" : "Group 2",
+            "long"  : "Group 2 long name for docs"
+        },
+        "group3" : {
+            "short" : "Group 3",
+            "long"  : "Group 3 long name for docs"
+        },
+        "group4" : {
+            "short" : "Group 4",
+            "long"  : "Group 4 long name for docs"
+        },
+        "group5" : {
+            "short" : "Group 5",
+            "long"  : "Group 5 long name for docs"
+        },
+        "group6" : {
+            "short" : "Group 6",
+            "long"  : "Group 6 long name for docs"
+        },
+        "group7" : {
+            "short" : "Group 7",
+            "long"  : "Group 7 long name for docs"
+        },
+        "group8" : {
+            "short" : "Group 8",
+            "long"  : "Group 8 long name for docs"
+        },
+        "group9" : {
+            "short" : "Group 9",
+            "long"  : "Group 9 long name for docs"
+        },
+        "group10" : {
+            "short" : "Group 10",
+            "long"  : "Group 10 long name for docs"
+        }
+    },
+    "constraints" : [
+        {
+            "has"    : { "type" : "group1" },
+            "type"   : "position",
+            "x"      : 0.2,
+            "y"      : 0.2,
+            "weight" : 0.7
+        }, {
+            "has"    : { "type" : "group2" },
+            "type"   : "position",
+            "x"      : 0.8,
+            "y"      : 0.2,
+            "weight" : 0.7
+        }, {
+            "has"    : { "type" : "group3" },
+            "type"   : "position",
+            "x"      : 0.2,
+            "y"      : 0.5,
+            "weight" : 0.7
+        }, {
+            "has"    : { "type" : "group4" },
+            "type"   : "position",
+            "x"      : 0.8,
+            "y"      : 0.5,
+            "weight" : 0.7
+        }, {
+            "has"    : { "type" : "group5" },
+            "type"   : "position",
+            "x"      : 0.2,
+            "y"      : 0.8,
+            "weight" : 0.7
+        }, {
+            "has"    : { "type" : "group8" },
+            "type"   : "position",
+            "x"      : 0.8,
+            "y"      : 0.8,
+            "weight" : 0.7
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+This table temporarily stores the miscellaneous other data for the current
+period while the data is being extracted and loaded to the database.

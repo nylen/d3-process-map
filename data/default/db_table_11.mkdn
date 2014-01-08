@@ -1,0 +1,3 @@
+This table contains miscellaneous other data for all periods.  Where
+{{db_table_10}} contains the latest data for each period, this
+table stores all updates to the miscellaneous items data.
