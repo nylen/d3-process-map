@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ALL & ~E_NOTICE);
 require_once 'markdown/Markdown.inc.php';
 use \Michelf\Markdown;
 
