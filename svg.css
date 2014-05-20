@@ -5,7 +5,7 @@
     opacity: .7;
     marker-end: url(#end);
     
-    transition: opacity 250ms;;
+    transition: opacity 250ms;
     -webkit-transition: opacity 250ms;
     -moz-transition: opacity 250ms;
 }
@@ -19,7 +19,7 @@ marker#end {
 .node rect {
     stroke-width: 1.5px;
     
-    transition: opacity 250ms;;
+    transition: opacity 250ms;
     -webkit-transition: opacity 250ms;
     -moz-transition: opacity 250ms;
 }
