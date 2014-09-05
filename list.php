@@ -15,6 +15,7 @@ read_data();
         <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="print.css">
+        <script src="//fightforthefuture.github.io/battleforthenet-widget/widget.min.js" async></script>
     </head>
     <body>
         <a class="btn btn-default nav-button" id="nav-graph" href="graph.php<?php echo $dataset_qs; ?>">
