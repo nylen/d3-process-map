@@ -14,7 +14,6 @@ read_config();
         <link rel="stylesheet" href="bootstrap.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="svg.css">
-        <script src="//fightforthefuture.github.io/battleforthenet-widget/widget.min.js" async></script>
     </head>
     <body>
         <!--[if lt IE 9]>
