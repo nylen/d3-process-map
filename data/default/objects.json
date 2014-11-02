@@ -3,9 +3,9 @@
         "type"    : "view",
         "name"    : "db_view_1",
         "depends" : [
-            "db_table_15",
-            "db_table_14",
-            "db_table_1"
+            { "name" : "db_table_15", "type" : "link_type1" },
+            { "name" : "db_table_14", "type" : "link_type2" },
+            { "name" : "db_table_1" , "type" : "link_type1" }
         ]
     }, {
         "type"    : "view",
