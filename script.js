@@ -1,9 +1,12 @@
 var graph       = {},
     selected    = {},
-    highlighted = null;
+    highlighted = null,
+    isIE        = false;
 
 $(function() {
     resize();
+
+    isIE = $.browser.msie;
 
     d3.json(config.jsonUrl, function(data) {
         if (data.errors.length) {
@@ -497,6 +500,12 @@ function tick(e) {
             return d.source.y;
         })
         .each(function(d) {
+            if (isIE) {
+                // Work around IE bug regarding paths with markers
+                // Credit: #6 and http://stackoverflow.com/a/18475039/106302
+                this.parentNode.insertBefore(this, this);
+            }
+
             var x    = d.target.x,
                 y    = d.target.y,
                 line = new geo.LineSegment(d.source.x, d.source.y, x, y);
