@@ -8,6 +8,10 @@ $(function() {
 
     isIE = $.browser.msie;
 
+    if ($.browser.mozilla) {
+        $('body').addClass('firefox');
+    }
+
     d3.json(config.jsonUrl, function(data) {
         if (data.errors.length) {
             alert('Data error(s):\n\n' + data.errors.join('\n'));

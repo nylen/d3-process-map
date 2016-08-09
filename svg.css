@@ -34,6 +34,12 @@ marker#end {
     filter: url(#blue-glow);
 }
 
+body.firefox .node.selected rect {
+    filter: none;
+    stroke: #000;
+    stroke-width: 2px;
+}
+
 .link.inactive,
 .node.inactive rect,
 .node.inactive text {
