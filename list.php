@@ -23,7 +23,7 @@ read_data();
 <?php
 foreach ($data as $obj) {
     $id = get_id_string($obj['name']);
-    echo "<div class=\"docs\" id=\"$id\">$obj[docs]</div>\n";
+    echo "<div class=\"docs\" id=\"$id\">{$obj['docs']}</div>\n";
 }
 ?>
         </div>

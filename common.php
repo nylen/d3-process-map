@@ -118,7 +118,9 @@ function read_data() {
     }
     unset($obj);
     foreach ($data as &$obj) {
-        $obj['docs'] = get_html_docs($obj);
+        if (empty($obj['docs'])) {
+            $obj['docs'] = get_html_docs($obj);
+        }
     }
     unset($obj);
 }
